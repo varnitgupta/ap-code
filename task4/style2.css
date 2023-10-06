@@ -1,0 +1,561 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+    box-sizing: border-box;
+}
+
+/* Header */
+nav {
+    /* background-color: #333; */
+    /* color: #fff; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px;
+    /* color: #fff; */
+}
+.mobile-menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    display: inline-block;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-el {
+    text-decoration: none;
+    /* color: #fff; */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.menu-el:hover {
+    color: #ffc107;
+}
+
+/* Page 1 */
+.page1 {
+    /* background-color: #333; */
+    /* color: #fff; */
+    text-align: center;
+    padding: 40px 0;
+}
+
+.page1 h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page1 p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.page1 button {
+    background-color: #ffc107;
+    /* color: #333; */
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page1 button:hover {
+    background-color: #ffdb58;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle:checked + .menu-button + .menu {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    .menu{
+        display: none;
+    }
+
+    /* nav{
+        display: flex;
+        flex-direction: column;
+    } */
+    /* #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    } */
+
+    .menu-el {
+        margin-top: 10px;
+    }
+
+    .page1 h1 {
+        font-size: 28px;
+    }
+
+    .page1 p {
+        font-size: 16px;
+    }
+
+    .page1 button {
+        font-size: 14px;
+    }
+}
+
+/* Page 2 */
+.page2 {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.page2 h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page2 p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.page2 button {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page2 button:hover {
+    background-color: #555;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .page2 {
+        text-align: left;
+        padding: 40px 20px;
+    }
+
+    .imagetype1 {
+        width: 100%;
+    }
+
+    .page2 h1 {
+        font-size: 28px;
+    }
+
+    .page2 p {
+        font-size: 16px;
+    }
+
+    .page2 button {
+        font-size: 14px;
+    }
+}
+
+/* Page 3 */
+.page3 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.page3 h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page3 p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.page3-1t {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.page3-1-1,
+.page3-1-2,
+.page3-1-3 {
+    flex-basis: calc(33.33% - 20px);
+}
+
+.page3-1-1-1,
+.page3-1-2-1,
+.page3-1-3-1 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .page3-1 {
+        text-align: left;
+    }
+
+    .page3-1t {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page3-1-1,
+    .page3-1-2,
+    .page3-1-3 {
+        flex-basis: 100%;
+    }
+
+    .page3-1-1 img,
+    .page3-1-2 img,
+    .page3-1-3 img {
+        width: 100%;
+    }
+}
+
+/* Page 4 */
+.page4 {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.page4 h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page4 p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.page4-1,
+.page4-2,
+.page4-3 {
+    display: flex;
+    margin-top: 40px;
+}
+
+.page4-1 img,
+.page4-2 img,
+.page4-3 img {
+    width: 100%;
+}
+
+.page4-1-1,
+.page4-2-1,
+.page4-3-1 {
+    text-align: left;
+}
+
+.page4-1-1 h1,
+.page4-2-1 h1,
+.page4-3-1 h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.page4-1-1 p,
+.page4-2-1 p,
+.page4-3-1 p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.page4-1 button,
+.page4-2 button,
+.page4-3 button {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page4-1 button:hover,
+.page4-2 button:hover,
+.page4-3 button:hover {
+    background-color: #555;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .page4-1,
+    .page4-2,
+    .page4-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page4-1-1,
+    .page4-2-1,
+    .page4-3-1 {
+        text-align: center;
+    }
+
+    .page4-1 img,
+    .page4-2 img,
+    .page4-3 img {
+        width: 80%;
+    }
+
+    .page4-1-1 h1,
+    .page4-2-1 h1,
+    .page4-3-1 h1 {
+        font-size: 24px;
+    }
+
+    .page4-1-1 p,
+    .page4-2-1 p,
+    .page4-3-1 p {
+        font-size: 14px;
+    }
+
+    .page4-1 button,
+    .page4-2 button,
+    .page4-3 button {
+        font-size: 12px;
+    }
+}
+
+/* Page 5 */
+.page5 {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.page5 h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page5 p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.page5-2-2-1 {
+    margin-top: 20px;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .page5 {
+        text-align: left;
+        padding: 40px 20px;
+    }
+
+    .page5 h1 {
+        font-size: 28px;
+    }
+
+    .page5 p {
+        font-size: 16px;
+    }
+}
+
+/* Page 6 */
+
+/* CSS for page6 */
+.page6 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map {
+    flex-basis: calc(50% - 10px); /* 50% width with 10px spacing in between */
+    margin-right: 10px; /* Add some spacing between map and form */
+}
+
+.map iframe {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    flex-basis: calc(50% - 10px); /* 50% width with 10px spacing in between */
+    margin-left: 10px; /* Add some spacing between map and form */
+}
+
+.form input,
+.form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form button {
+    background-color: #ffc107;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #ffdb58;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .page6 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map,
+    .form {
+        flex-basis: 100%; /* Full width for smaller screens */
+        margin: 0; /* Remove margin between map and form */
+    }
+}
+
+
+
+/* .page6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    margin: 20px 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form #fomr-ci{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+/* 
+.form input,
+.form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form button {
+    background-color: #ffc107;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #ffdb58;
+} */
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5vh 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* Add responsive CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    /* .form input,
+    .form button {
+        width: 100%;
+    } */
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer #copyright{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.8rem;
+    }
+
+    footer a {
+        margin: 10px 10px;
+    }
+}

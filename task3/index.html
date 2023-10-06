@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <form onSubmit="submitData(event)" style="display: inline-block; text-align: left;">
+            <div style="display: flex; justify-content: space-between;">
+                <label for="fname">Full Name: </label>
+                <input type="text" name="fname" id="fname" placeholder="Full Name" required minlength="3" autocomplete="off">
+            </div>
+            <br>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div style="display: flex; justify-content: space-between;">
+                    <label for="email">Email: </label>
+                    <input  type="email" name = "email" id="email" placeholder="Email Address" required>
+                </div>
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <label for="mobile">Mobile: </label>
+                    <input  type="tel" name = "mobile" id="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                </div>
+            </fieldset>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="country">Country: </label>
+                <input type="text" name="country" id="country" list="countries">
+                <datalist id="countries">
+                    <option value="USA">
+                    <option value="Canada">
+                    <option value="India">
+                </datalist>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;" >
+                <p>Gender: </p>
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" name="male" id="male">
+                    <label for="female">female</label>
+                    <input type="radio" name="female" id="female">
+                </div>
+
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="age">Age: </label>
+                <input  type="number" name="age" id="age" placeholder="Age" >
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="summary">Summary: </label>
+                <textarea name="summary" id="summary" cols="30" rows="10" placeholder="Profile summary" required maxlength="50"></textarea>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="website">Website: </label>
+                <input type="url" name="website" id="website" placeholder="website url">
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;" >
+                <label for="date">Date of Joining: </label>
+                <input  type="date" name="date" id="date" placeholder="Availale date">
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;" >
+                <label for="video-profile">Video Profile: </label>                
+                <input type="file" name="video-profile" id="video-profile" accept="video/*">
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="resume">Resume: </label>
+                <input  type="file" name="resume" id="resume">
+            </div>
+            <input type="submit" name="submit" id="submit">
+                
+        </form>
+    </div>
+    <div class="table-container">
+        <table id = "data-table">
+            <tr>
+                <th>Name</th>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

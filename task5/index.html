@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <form onSubmit="handleSubmit(event)" style="display: inline-block; text-align: left;"name = "form1">
+
+            <div >
+                <span style="display: flex; justify-content: space-between;">
+                    <label for="fname">Full Name: </label>
+                    <input type="text" name="fname" id="fname" placeholder="Full Name">
+                </span>
+                <span id="cfname" style="color: red; float: right; display: none;">*This Field is required</span>
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="email">Email: </label>
+                <input  type="email" name="email" id="email" placeholder="Email Address">
+            </div>
+            <span id="cemail" style="color: red; float: right; display: none;">*This Field is required</span>
+
+            <br>
+            <!-- mobile -->
+            <div style="display: flex; justify-content: space-between;">
+                <label for="mobile">Mobile: </label>
+                <input  type="tel" name="mobile" id="mobile" placeholder="Mobile Number">
+            </div>
+            <span id="cmobile" style="color: red; float: right; display: none;">*This Field is required</span>
+            <br>
+            <!-- password -->
+            <div style="display: flex; justify-content: space-between;">
+                <label for="password">Password: </label>
+                <input  type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <span id="cpassword" style="color: red; float: right; display: none;">*This Field is required</span>
+            <br>
+            <!-- confirm password -->
+            <div style="display: flex; justify-content: space-between;">
+                <label for="cnfPassword">Confirm Password: </label>
+                <input  type="password" name="cnfpassword" id="cnfPassword" placeholder="Confirm Password">
+            </div>
+            <span id="ccnfpassword" style="color: red; float: right; display: none;">*This Field is required</span>
+            <span id="ccnfpasswordm" style="color: red; float: right; display: none;">*Passwords do not match</span>
+<!-- ************* -->
+<br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="country">Country: </label>
+                <select name="country" id="country">
+                    <!-- <option value="MadhyaPradesh">Madhya Pradesh</option>
+                    <option value="uttarPradesh">Uttar Pradesh</option>
+                    <option value="Telangana">Madhya Pradesh</option>
+                    <option value="Assam">Madhya Pradesh</option> -->
+                </select>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="state">State: </label>
+                <select name="state" id="state">
+                    <!-- <option value="MadhyaPradesh">Madhya Pradesh</option>
+                    <option value="uttarPradesh">Uttar Pradesh</option>
+                    <option value="Telangana">Madhya Pradesh</option>
+                    <option value="Assam">Madhya Pradesh</option> -->
+                </select>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="city">City: </label>
+                <select name="city" id="city">
+                    <!-- <option value="MadhyaPradesh">Madhya Pradesh</option>
+                    <option value="uttarPradesh">Uttar Pradesh</option>
+                    <option value="Telangana">Madhya Pradesh</option>
+                    <option value="Assam">Madhya Pradesh</option> -->
+                </select>
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;" >
+                <p>Gender: </p>
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female">
+                </div>
+
+            </div>
+
+
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="age">Age: </label>
+                <input  type="number" name="age" id="age" placeholder="Age">
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="summary">Summary: </label>
+                <textarea name="summary" id="summary" cols="30" rows="10" placeholder="Profile summary"></textarea>
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="website">Website: </label>
+                <input type="url" name="website" id="website" placeholder="Website URL">
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;" >
+                <label for="date">Date of Joining: </label>
+                <input  type="date" name="date" id="date" placeholder="Available date">
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;" >
+                <label for="image-profile">Image Profile: </label>                
+                <input type="file" name="image-profile" id="image-profile" accept="image/*">
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="resume">Resume: </label>
+                <input  type="file" name="resume" id="resume">
+            </div>
+            <input type="submit" name="submit" id="submit">
+        </form>
+    </div>
+
+    <div class="table-container">
+        <table id="data-table">
+            <tr>
+                <th>Name</th>
+            </tr>
+        </table>
+    </div>
+    <script src="index2.js"></script>
+</body>
+</html>
