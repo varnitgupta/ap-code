@@ -1,0 +1,29 @@
+.form-field{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.hide{
+    display: none;
+}
+
+.error-message{
+    color: red; 
+    float: right; 
+    display: none;
+}
+
+.edit-button{
+    background-color: green;
+    color: #fff;
+    width: 50%;
+    height: auto;
+}
+
+.delete-button{
+    background-color: red;
+    color: #fff;
+    width: 50%;
+    height: auto;
+}
+

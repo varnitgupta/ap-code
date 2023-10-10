@@ -1,3 +1,84 @@
+let countries = [
+    {
+      name: "India",
+      states: [
+        {
+          name: "MadhyaPradesh",
+          cities: ["Gwalior", "Indore", "Ujjain"]
+        },
+        {
+          name: "UttarPradesh",
+          cities: ["Lucknow", "Kanpur", "Noida"]
+        }
+      ]
+    },
+    {
+      name: "USA",
+      states: [
+        {
+          name: "Illinois",
+          cities: ["Chicago", "Chicago2"]
+        },
+        {
+          name: "Texas",
+          cities: ["Pitsburg", "Messachhusets"]
+        }
+      ]
+    }
+  ];
+
+let selectCountry = document.getElementById("country");
+let selectState = document.getElementById("state");
+let selectCity = document.getElementById("city");
+
+function populateDropdown(element, data) {
+    element.innerHTML = ""; // Clear existing options
+    for (let item of data) {
+      let option = document.createElement("option");
+      option.value = item.name;
+      option.innerText = item.name;
+      element.appendChild(option);
+    }
+}
+
+function updateStateAndCity() {
+    let selectedCountryName = selectCountry.value;
+    let selectedStateName = selectState.value;
+  
+    let selectedCountry = countries.find(country => country.name === selectedCountryName);
+  
+    if (selectedCountry) {
+      populateDropdown(selectState, selectedCountry.states);
+  
+      let selectedState = selectedCountry.states.find(state => state.name === selectedStateName);
+  
+      if (selectedState) {
+        populateDropdown(selectCity, selectedState.cities);
+      } else {
+        selectCity.innerHTML = ""; // Clear City dropdown if no state selected
+      }
+    } else {
+      selectState.innerHTML = ""; // Clear State dropdown if no country selected
+      selectCity.innerHTML = ""; // Clear City dropdown if no state selected
+    }
+  }
+  
+  // Event listeners to trigger updates
+  selectCountry.addEventListener("change", updateStateAndCity);
+  selectState.addEventListener("change", updateStateAndCity);
+  
+  // Initialize the Country dropdown
+  populateDropdown(selectCountry, countries);
+  
+  // Trigger initial update
+  updateStateAndCity();
+  
+
+
+
+
+
+
 function handleSubmit(e){
     e.preventDefault()
     let errors = {
@@ -59,3 +140,4 @@ function handleSubmit(e){
     table.appendChild(tr)
     alert("Submitted")
 }
+

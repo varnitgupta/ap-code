@@ -469,7 +469,7 @@
     }
   }
   
-  @media screen and (max-width: 768px) and (min-width: 425px) {
+  /* @media screen and (max-width: 768px) and (min-width: 425px) {
     nav {
       display: flex;
       height: 100px;
@@ -584,7 +584,7 @@
       padding: 10px;
       border-radius: 4px;
     }
-  }
+  } */
   /* @media screen and (min-width: 1441px){
      
       .logo {
