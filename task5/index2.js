@@ -46,16 +46,24 @@ let selectCountry = document.getElementById("country");
 let selectState = document.getElementById("state");
 let selectCity = document.getElementById("city");
 
-const clearDropown = (elements)=>{
+const clearDropown = (elements,removeAll=false)=>{
+  console.log("elements", elements)
   for(let element of elements){
+    console.log("element", element);
     let newArray = Array.from(element.options)
+    console.log(element.options);
     newArray.forEach(option=>{
-      if(!option.disabled)
+      if(!option.disabled){
+        console.log("remove", option.value);
         option.remove()
-      else
-        option.selected = true
+      }
+      else{
+        if(!removeAll){
+          console.log("select",option.value);   
+          option.selected = true
+        }
+      }
     })
-
   }
 }
 const populateDropdown=(element, data)=> {
@@ -90,6 +98,9 @@ selectState.onchange=()=>updateStateAndCity("forCity");
 
 
 const defaultLocationState=()=>{
+  selectCountry.innerHTML = ''
+  selectState.innerHTML = ''
+  selectCity.innerHTML = ''
 
 let defaultCountryOption = document.createElement("option");
 defaultCountryOption.value = "";
@@ -488,7 +499,7 @@ const fillFormFromValues = ()=>{
       item.name=="Resume"? editResumeInput():editImageInput()
     }
     else if(item.name=="Country"){
-        populateDropdown(selectCountry,countries)
+        // populateDropdown(selectCountry,countries)
         form[item.name].value=item.value
         updateStateAndCity("forState");
     }
@@ -520,6 +531,7 @@ const editRow= (button)=>{
   // console.log("button: ", button);
   enableSaveButton(button)
   fillValuesFromTable(button)
+  resetForm()
   fillFormFromValues()
   // editResumeInput()
   // editImageInput()
@@ -576,13 +588,12 @@ const scrollToTop =() => window.scrollTo(
     behavior: "smooth" // For smooth scrolling animation
   }
 );
-
 const resetForm = ()=>{
-  clearDropown([selectCountry,selectCity,selectState])
-  // populateDropdown(selectCountry, countries);
-  form.querySelector("#selectedImage").remove()
-  form.querySelector("#selectedResume").remove()
-  form.reset()}
+  form.reset()
+  defaultLocationState()
+  form.querySelector("#selectedResume")?.remove()
+  form.querySelector("#selectedImage")?.remove()
+}
 
 let imageInput = document.getElementById("image-profile")
 imageInput.onchange = ()=>{
