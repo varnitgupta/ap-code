@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Html Form</title>
 </head>
 <body>
@@ -14,6 +14,7 @@
             <label for="fname">Full Name: </label>
             <input class="form-field-input" type="text" name="FullName" id="fname" placeholder="Full Name">
             <span id="cfname" class="error-message">*This Field is required</span>
+            <span id="cfname2" class="error-message">*Name should container minimum of 2 charaters</span>
           </div>
       
           <br>
@@ -21,8 +22,9 @@
           <!-- Email -->
           <div class="form-field">
             <label for="email">Email: </label>
-            <input class="form-field-input" type="email" name="Email" id="email" placeholder="Email Address">
+            <input class="form-field-input" type="text" name="Email" id="email" placeholder="Email Address">
             <span id="cemail" class="error-message">*This Field is required</span>
+            <span id="cemail2" class="error-message">*Invalid email address</span>
           </div>
       
           <br>
@@ -32,6 +34,7 @@
             <label for="mobile">Mobile: </label>
             <input class="form-field-input" type="tel" name="Mobile" id="mobile" placeholder="Mobile Number">
             <span id="cmobile" class="error-message">*This Field is required</span>
+            <span id="cmobile2" class="error-message">*Invalid mobile number. Please enter a 10-digit phone number.</span>
           </div>
       
           <br>
@@ -50,7 +53,7 @@
             <label for="cnfPassword">Confirm Password: </label>
             <input class="form-field-input" type="password" name="CnfPassword" id="cnfPassword" placeholder="Confirm Password">
             <span id="ccnfpassword" class="error-message">*This Field is required</span>
-            <span id="ccnfpasswordm" class="error-message">*Passwords do not match</span>
+            <span id="ccnfpassword2" class="error-message">*Passwords do not match</span>
           </div>
       
           <br>
@@ -125,6 +128,7 @@
             <label for="website">Website: </label>
             <input class="form-field-input" type="url" name="Website" id="website" placeholder="Website URL">
             <span id="cwebsite" class="error-message">*This Field is required</span>
+            <span id="cwebsite2" class="error-message">*Invalid URL</span>
           </div>
       
           <br>
